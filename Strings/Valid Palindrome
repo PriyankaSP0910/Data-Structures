@@ -1,0 +1,49 @@
+public class Main
+{
+public static void main(String args[])
+{
+String s="raCeCare";
+int p1 = 0;
+int p2= s.length()-1;
+         
+        // Lowercase string
+        s = s.toLowerCase();
+         
+        // Compares character until they are equal
+        while(p1<= p2)
+        {
+             
+            char s1 = s.charAt(p1);
+            char s2 = s.charAt(p2);
+             
+            // If there is another symbol in left
+            // of sentence
+            if (!(s1 >= 'a' && s1 <= 'z'))
+                p1++;
+            
+             
+            // If there is another symbol in right
+            // of sentence
+            if(!(s2>= 'a' && s2 <= 'z'))
+                p2--;
+            
+            // If characters are equal
+            if( s1 == s2)
+            {
+                p1++;
+                p2--;
+            }
+             
+            // If characters are not equal then
+            // sentence is not palindrome
+            else
+                System.out.println(false);
+                System.exit(0);
+                
+        }
+         
+        // Returns true if sentence is palindrome
+        System.out.println(true);
+    }
+
+}
