@@ -1,1 +1,21 @@
+import java.util.*;
+public class HelloWorld{
+    public static void main(String args[])
+    {
+int a[]={6,3,2,9,6,78};
+Arrays.sort(a);
+for(int i=a.length-2;i>=0;i--)
+{
+if(a[i]!=a[i+1])
+{
+   System.out.println(a[i]);
+   break;
+}
+else
+{
+   continue;
+}
+}
+}
+}
 
