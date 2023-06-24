@@ -6,14 +6,16 @@ public class HelloWorld{
     int c[]=new int[256];
     int l=s.length();
     char z=s.charAt(0);
-    char min=z;
-    char max=z;
-    char res1='';
-    char res2='';
-    for(i=0;i<l;i++)
+    int min=z;
+    int max=-1;
+    char res1=' ';
+    char res2=' ';
+    for(int i=0;i<l;i++)
     {
         c[s.charAt(i)]++;
     }
+    for(int i=0;i<l;i++)
+    {
     if(min>c[s.charAt(i)])
     {
         min=c[s.charAt(i)];
@@ -24,7 +26,8 @@ public class HelloWorld{
         max=c[s.charAt(i)];
         res2=s.charAt(i);
     }
-    System.out.println("Maximum character is:"+res2+"Minimum character is:"+res1);
+    }
+    System.out.println("Maximum character is:"+res2);
+    System.out.println("Minimum character is:"+res1);
 }
 }
-
