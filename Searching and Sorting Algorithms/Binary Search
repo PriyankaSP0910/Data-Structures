@@ -1,0 +1,31 @@
+public class HelloWorld{
+    
+    public static void binarysearch(int x[],int s,int l,int val)
+    {
+        int mid=(s+l)/2;
+        while(s<=l)
+        {
+            if(x[mid]==val)
+            {
+                System.out.println("Element found at index:"+mid);
+                System.exit(0);
+            }
+            else if(x[mid]<val)
+            {
+                s=mid+1;
+            }
+            else
+            {
+                l=mid-1;
+            }
+            mid=(s+l)/2;
+        }
+        System.out.println("Element not found");
+    }
+
+     public static void main(String []args){
+      int a[]={2,3,4,5,6,7,8};
+      int last=a.length-1;
+      binarysearch(a,0,last,7);
+     }
+}
