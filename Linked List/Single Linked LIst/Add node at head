@@ -1,1 +1,51 @@
+/* Online Java Compiler and Editor */
+public class LL{
+    public Node head=null;
+    class Node(int data)
+    {
+        int data;
+        Node next;
+        
+        Node(int data)
+        {
+            this.data=data;
+            this.next=null;
+        }
+    }
+    
+    public void addathead(int data)
+    {
+        Node n=new Node(data);
+        if(head==null)
+        {
+            head=n;
+            return;
+        }
+        n.next=head;
+        head=n;
+        
+    }
+    
+    public void display()
+    {
+        Node curr=head;
+        if(head==null)
+        {
+            System.out.println("No nodes to print");
+        }
+        while(curr!=null)
+        {
+            System.out.print(curr.data+"->");
+            curr=curr.next;
+        }
+    }
 
+     public static void main(String []args){
+         LL l=new LL();
+         l.addathead(9);
+         l.addathead(9);
+         l.addathead(9);
+         l.display();
+        
+     }
+}
