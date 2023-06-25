@@ -22,8 +22,8 @@ public class LinkedList {
 		}
 		else
 		{
-	    new_node.next=list.head;
-	    list.head=new_node;
+		    new_node.next=list.head;
+		    list.head=new_node;
 		}
         return list;
 	}
