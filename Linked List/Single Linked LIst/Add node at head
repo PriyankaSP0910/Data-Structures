@@ -1,4 +1,3 @@
-/* Online Java Compiler and Editor */
 public class LL{
     public Node head=null;
     class Node(int data)
