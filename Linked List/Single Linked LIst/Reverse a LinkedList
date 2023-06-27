@@ -1,1 +1,82 @@
+import java.io.*;
+public class LinkedList {
+	
+	public Node head=null;
+	static class Node {
+	
+		int data;
+		Node next;
+	
+		Node(int d)
+		{
+			data = d;
+			next = null;
+		}
+	}
+	
+	public static LinkedList addatlast(LinkedList list,int data)
+	{
+	    Node n=new Node(data);
+	    
+	    if(list.head==null)
+	    {
+	        list.head=n;
+	    }
+	    else
+	    {
+	        Node curr=list.head;
+	        while(curr.next!=null)
+	        {
+	            curr=curr.next;
+	        }
+	        curr.next=n;
+	    }
+	    return list;
+	}
+	
 
+	public static LinkedList reverse(LinkedList list)
+	{
+	   if(list.head==null || list.head.next==null)
+	    {
+	        return list;
+	    }
+	    Node prev=list.head;
+	    Node curr=prev.next;
+	    Node nxt=null;
+	    while(curr!=null)
+	    {
+	        nxt=curr.next;
+	        curr.next=prev;
+	        prev=curr;
+	        curr=nxt;
+	    }
+	    list.head=prev;
+	    return list;
+	}
+	
+	public static void printList(LinkedList list)
+	{
+		Node currNode = list.head;
+	
+		System.out.print("LinkedList: ");
+		while (currNode != null) {
+			System.out.print(currNode.data + " -> ");
+			currNode = currNode.next;
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		LinkedList list = new LinkedList();
+		list = addatlast(list, 1);
+		list = addatlast(list, 2);
+		list = addatlast(list, 3);
+		list = addatlast(list, 4);
+	    System.out.println("Before Reversal");
+	    printList(list);
+        list=reverse(list);
+	    System.out.println("After Reversal");
+	    printList(list);
+	}
+}
