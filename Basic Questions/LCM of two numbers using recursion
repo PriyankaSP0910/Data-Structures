@@ -1,1 +1,23 @@
+public class LCM{
+    public int lcm(int a,int b,int m)
+    {
+        m=m+b;
+        if((m%a==0) && (m%b==0))
+        {
+            return m;
+        }
+        else 
+        {
+            return lcm(a,b,m);
+        }
+    }
 
+     public static void main(String []args){
+       LCM l=new LCM();
+       int a=6,b=16;
+       int m=0;
+       int x=l.lcm(a,b,m);
+       System.out.println(x);
+       
+     }
+}
