@@ -1,0 +1,22 @@
+public class Fibonacci
+{
+    public static void fib(int count,int a,int b,int res)
+    {
+        count=count-2;
+        while(count>0)
+        {
+            res=a+b;
+            a=b;
+            b=res;
+            System.out.print(res+" ");
+            count--;
+            
+        }
+    }
+  
+     public static void main(String []args){
+     int a=0,b=1,res=0,count=10;
+     System.out.print(a+" "+b);
+     fib(count,a,b,res);
+     }
+}
