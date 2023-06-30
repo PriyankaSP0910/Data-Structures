@@ -1,0 +1,20 @@
+public class HelloWorld{
+    public int gcd(int a,int b)
+    {
+        if(b==0)
+        {
+        return a;
+        }
+        else
+        {
+        return gcd(b,a%b);
+        }
+    }
+     public static void main(String []args){
+     HelloWorld h=new HelloWorld();
+     int a=50;
+     int b=60;
+     int ans=h.gcd(a,b);
+     System.out.println("GCD IS:"+ans);
+}
+}
