@@ -1,0 +1,22 @@
+import java.util.*;
+public class HelloWorld {
+    public static void main(String[] args) {
+  int a[]={2,4,5,6,5,7,8,8};
+  for(int i=0;i<a.length;i++)
+  {
+      int x=a[i];
+      int count=0;
+      for(int j=0;j<a.length;j++)
+      {
+          if(x==a[j])
+          {
+              count++;
+          }
+      }
+      if(count==1)
+      {
+          System.out.println(a[i]);
+      }
+  }
+    }
+}
