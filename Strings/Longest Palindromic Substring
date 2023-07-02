@@ -1,6 +1,4 @@
-/* Online Java Compiler and Editor */
-public class HelloWorld{
-    public static void palindrome(char ss[])
+ public static void palindrome(char ss[])
     {
         int start=0,end=0,len=0;
         int n=ss.length;
