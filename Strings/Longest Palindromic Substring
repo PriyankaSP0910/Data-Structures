@@ -1,0 +1,47 @@
+/* Online Java Compiler and Editor */
+public class HelloWorld{
+    public static void palindrome(char ss[])
+    {
+        int start=0,end=0,len=0;
+        int n=ss.length;
+        for(int i=1;i<n;i++)
+        {
+            int s=i-1;
+            int e=i+1;
+            while(s>=0 && e<n && ss[e]==ss[s])
+            {
+                if(e-s+1>len)
+                {
+                    len=e-s+1;
+                    start=s;
+                    end=e;
+                }
+                s--;
+                e++;
+            }
+            s=i-1;
+            e=i;
+            while(s>=0 && e<n && ss[e]==ss[s])
+            {
+                if(e-s+1>len)
+                {
+                    len=e-s+1;
+                    start=s;
+                    end=e;
+                }
+                s--;
+                e++;
+            }
+            String ans=" ";
+            for(int j=start;j<=end;j++)
+            {
+                System.out.print(ss[j]);
+            }
+            
+        }
+    }
+     public static void main(String []args){
+      char ss[]={'a','b','b','b','c'};
+      palindrome(ss);
+     }
+}
