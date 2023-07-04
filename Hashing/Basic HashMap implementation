@@ -1,0 +1,31 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+    /*CREATE HASHMAP*/
+      HashMap<String,Integer> map=new HashMap<>();
+    /*ENTER DATA IN KEY,VALUE PAIRS INTO HASHMAP*/
+      map.put("India",30);
+      map.put("Japan",50);
+      map.put("Brazil",70);
+      
+       /*CHECK IF KEY EXISTS*/
+       if(map.containsKey("Brazil"))
+       {
+           System.out.println(map.get("Brazil"));
+       }
+       else
+       {
+           System.out.println("Key does not exist");
+       }
+       /*ITERATE OVER HASHMAP*/
+       for(Map.Entry<String,Integer> i:map.entrySet())
+       {
+           System.out.println(i.getKey());
+           System.out.println(i.getValue());
+       }
+         /*REMOVE ELEMENT IN HASHMAP*/
+         
+        map.remove("Brazil");
+        System.out.println(map);
+    }
+}
