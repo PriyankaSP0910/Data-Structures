@@ -1,4 +1,4 @@
-//permutations 
+//permutations of string
 import java.util.*;
 class HelloWorld {
      public static void permutation(String input)
