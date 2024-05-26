@@ -18,3 +18,7 @@ public class Main{
         reverse(a,0,s.length());
      }
 }
+
+Time Complexity: O(n) // each recursion call for length of string
+Space Complexity: O(n) //stack used to store each recursive call
+
