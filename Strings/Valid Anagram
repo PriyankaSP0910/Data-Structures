@@ -31,3 +31,7 @@ public class Main
       System.out.println(true);
     }
 }
+
+
+// Time Complexity: O(n)
+// Space Complexity: O(n), primarily due to the storage of the input strings
